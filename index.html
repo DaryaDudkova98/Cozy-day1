@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="fox.png" type="image/png">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Cozy-day</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Сегодня — твой день ✨</h1>
+        <p class="text1">Маленькие чудеса случаются там, где их ждут...</p>
+        <button id="addToCart">Порадуй себя</button>
+        <div class="basket" style="margin-bottom: 20px;"></div>
+        <ul>
+            <li class="card block1">
+                <label class="card-label">
+                    <input type="checkbox" class="item-check" value="Горячий шоколад ☕️">
+                    <span>Горячий шоколад ☕️</span>
+                    <img class="picture1" src="png-klev-club-p-chashka-kofe-png-19.png" alt="coffee">
+                </label>
+                
+            </li>
+            <li class="card block1">
+                <label class="card-label">
+                    <input type="checkbox" class="item-check" value="Уютное одеяло 🧣">
+                    <span>Уютное одеяло 🧣</span>
+                    <img class="picture1" src="pngwing.com.png" alt="blanket">
+                </label>
+                
+            </li>
+            <li class="card block1">
+                <label class="card-label">
+                    <input type="checkbox" class="item-check" value="Любимая песня 🎶">
+                    <span>Любимая песня 🎶</span>
+                    <img class="picture1" src="—Pngtree—music notes vector_20328388.png" alt="music">
+                </label>
+                
+            </li>
+        </ul>
+        
+        <p class="text2">Береги себя - ты волшебство ✨</p>
+    </div>
+    <script>
+  const button = document.getElementById('addToCart');
+  const basket = document.querySelector('.basket');
+
+  button.addEventListener('click', () => {
+    const checkedItems = document.querySelectorAll('.item-check:checked');
+    const basketItems = [];
+
+    checkedItems.forEach(item => {
+      basketItems.push(item.value);
+      item.checked = false; // сбрасываем выбор после добавления
+    });
+
+    if (basketItems.length) {
+      basket.innerHTML = `<strong>Твоя корзина уюта:</strong><br>${basketItems.join(' • ')}`;
+    } else {
+      basket.innerHTML = 'Ты пока ничего не выбрал...';
+    }
+  });
+</script>
+</body>
+</html>

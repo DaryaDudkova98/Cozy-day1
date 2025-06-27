@@ -1,0 +1,143 @@
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom, #250e2c 20%, #837ab6 60%, #c9608e 90%, #cf5656 110%, #ee7385 100%, #f7c2ca);
+    background-repeat: no-repeat;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1{
+    font-size: 48px;
+    color: #fffead;
+    margin-bottom: 30px;
+}
+
+.text1{
+    font-size: 24px;
+    color: #fffead;
+    margin-bottom: 30px;
+}
+
+button{
+    font-size: 16px;
+    background-color: rgb(37, 14, 44, 0.3);
+    color: #fffead;
+    padding: 20px 40px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    border-color: #fffead;
+    cursor: url(cursor.png), auto;
+}
+
+button:hover{
+    background-color: rgb(37, 14, 44);
+    box-shadow: 0 4px 12px rgba(255, 254, 173, 5);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center; /* по горизонтали */
+    align-items: center;     /* по вертикали */
+    padding: 0;
+    margin: 0;
+}
+
+ul li{
+    list-style: none;
+    padding: 10px;
+    font-size: 16px;
+    color: rgb(255, 254, 173);
+}
+
+.card{
+    height: 150px;
+    background-color: rgb(37, 14, 44, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 254, 173, 0.5);
+    border-radius: 12px;
+    padding: 20px;
+    min-width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    margin: 0 5px 30px;
+    cursor: url(cursor.png), auto;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+
+.block1{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;     
+}
+
+.block1 span {
+  margin-bottom: 40px; /* отступ между текстом и картинкой */
+  font-size: 18px;
+}
+
+.card-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-label input[type="checkbox"] {
+  margin-bottom: 8px;
+}
+
+.picture1 {
+  max-width: 80px;
+  height: auto;
+}
+
+.text2{
+    font-size: 24px;
+    color: #fffead;
+    margin-bottom: 30px;
+}
+
+.card input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+  accent-color: #fffead;
+}
+
+.basket {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgba(255, 254, 173, 0.1);
+  border: 1px dashed rgba(255, 254, 173, 0.4);
+  color: #fffead;
+  font-size: 18px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.card-label input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fffead;
+  border-radius: 6px;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.card-label input[type="checkbox"]:checked {
+  background-color: #fffead;
+}
